@@ -61,7 +61,30 @@ El script `scripts/ensamblado.py` realiza el ensamblado (mapeo) de las lecturas.
 
 ### 4. Evaluación del ensamblaje 
 
+En esta fase planteamos la evaluación de la calidad del ensamblaje, mediante la herramienta BUSCO (Benchmarking Universal Single-Copy Orthologs), para comprobar que el ensamblaje está completo buscando genes que normalmente están presentes en organismos del mismo grupo.
 
+#### Archivos de entrada
+
+- `data/referencia.fasta`: secuencia de referencia.
+- `data/procesados.fasta`: secuencias procesadas en la fase de filtrado.
+- `data/ensamblado.bam`: archivo de alineamiento obtenido en la fase anterior.
+
+#### Procedimiento
+
+Utilizamos el script de Python `scripts/busco.py` para realizar el análisis de calidad del ensamblaje mediante BUSCO. Esta herramienta comprueba la presencia de determinados genes y los clasifica en las siguientes categorías:
+
+- Completos (C): genes que se han encontrado completamente.
+- Completos de copia única (S): genes completos que aparecen una sola vez.
+- Completos duplicados (D): genes completos que aparecen más de una vez.
+- Fragmentados (F): genes que se han encontrado de forma incompleta.
+- Ausentes (M): genes que no se han encontradi en el ensamblaje.
+
+Con esta información comprobamos si el ensamblaje realizado tiene una buena calidad o si faltan partes importantes de la secuencia.
+
+#### Resultados
+
+Guardamos los resultados del análisis en la carpeta `result_busco/` y creamos el archivo `result_busco/busco.txt` para recoger la información obtenida mediante el script.
+Después de realizar los análisis podemos consultar los porcentajes de genes completos, fragmentados y ausentes, para poder valorar si el ensamblaje es suficientemente completo para continuar con las siguientes fases del proyecto
 
 ### 5. Anotación de genomas (Prokka)
 

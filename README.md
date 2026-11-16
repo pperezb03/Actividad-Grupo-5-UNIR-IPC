@@ -77,7 +77,7 @@ Utilizamos el script de Python `scripts/busco.py` para realizar el análisis de 
 - Completos de copia única (S): genes completos que aparecen una sola vez.
 - Completos duplicados (D): genes completos que aparecen más de una vez.
 - Fragmentados (F): genes que se han encontrado de forma incompleta.
-- Ausentes (M): genes que no se han encontradi en el ensamblaje.
+- Ausentes (M): genes que no se han encontrado en el ensamblaje.
 
 Con esta información comprobamos si el ensamblaje realizado tiene una buena calidad o si faltan partes importantes de la secuencia.
 

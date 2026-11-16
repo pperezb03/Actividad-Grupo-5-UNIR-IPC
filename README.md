@@ -34,7 +34,7 @@ Ensamblado de las lecturas frente a la secuencia de referencia, con el script `s
 #### Archivos de entrada
 
 - `data/referencia.fasta`: secuencia de referencia.
-- `data/procesados.fasta`: lecturas procesadas en la fase anterior. *(Confirma que es esta la entrada del script.)*
+- `data/procesados.fasta`: lecturas procesadas en la fase anterior.
 
 #### Procedimiento
 
